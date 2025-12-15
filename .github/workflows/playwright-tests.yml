@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
         
@@ -65,7 +65,7 @@ jobs:
         publish_dir: allure-history
         
     - name: Upload Allure results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: allure-results
@@ -73,7 +73,7 @@ jobs:
         retention-days: 30
         
     - name: Upload HTML report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: html-report
@@ -81,7 +81,7 @@ jobs:
         retention-days: 30
         
     - name: Upload screenshots
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: screenshots
@@ -89,7 +89,7 @@ jobs:
         retention-days: 30
         
     - name: Upload logs
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: test-logs
